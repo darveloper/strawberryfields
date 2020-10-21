@@ -2,13 +2,16 @@ body {
     padding: 0;
     margin: 0;
     background: #f2f6e9;
-}
-
+  }
+  
+  /*--- navigation bar ---*/
+  
 .navbar {
-    background: #6ab446;
+    background:#6ab446;
 }
 
-.nav-link, .navbar-brand {
+.nav-link,
+.navbar-brand {
     color: #fff;
     cursor: pointer;
 }
@@ -21,64 +24,132 @@ body {
     color: #000;
 }
 
-.nav-collapse {
+.navbar-collapse {
     justify-content: flex-end;
 }
 
 .jumbotron {
-    height: 50%;
-    position: relative;
+    /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
     background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url("images/header-background.jpg");
+  
+    /* Set a specific height */
+    height: 50%;
+  
+    /* Position and center the image to scale nicely on all screens */
     background-position: center;
     background-repeat: no-repeat;
     background-size: cover;
-}
+    position: relative;
+  }
+  
+  /* Place text in the middle of the image */
+  .hero-text {
+    text-align: center;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+  }
 
-.features {
+  .features {
     margin: 4em auto;
     padding: 1em;
     position: relative;
-}
-
-.feature-title {
+  }
+  
+  .feature-title {
     color: #333;
     font-size: 1.3rem;
     font-weight: 700;
     margin-bottom: 20px;
     text-transform: uppercase;
-}
-
-.features img {
+  }
+  
+  .features img {
     -webkit-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     -moz-box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     box-shadow: 1px 1px 4px rgba(0, 0, 0, 0.4);
     margin-bottom: 16px;
-}
+  }
 
-.features .form-control, .feature input {
-    border-radius: 0%;
+  .features .form-control,
+.features input {
+    border-radius: 0;
 }
 
 .features .btn {
-    background-color: #589b37;
-    border: 1px solid #589b37;
-    color: #fff;
-    margin-top: 20px;
+  background-color: #589b37;
+  border: 1px solid #589b37;
+  color: #fff;
+  margin-top: 20px;
 }
 
 .features .btn:hover {
-    background-color: #333;
-    border: 1px solid #333;
+  background-color: #333;
+  border: 1px solid #333;
 }
 
 .page-footer {
     background-color: #222;
     color: #ccc;
     padding: 60px 0 30px;
-}
-
-.footer-copyright {
-    color: #667;
+  }
+  
+  .footer-copyright {
+    color: #666;
     padding: 40px 0;
+  }
 
+  @media (max-width: 575.98px) {
+
+    .description {
+      left: 0;
+      padding: 0 15px;
+      position: absolute;
+      top: 10%;
+      transform: none;
+      text-align: center;
+    }
+    
+    .description h1 {
+      font-size: 2em;
+    }
+    
+    .description p {
+      font-size: 1.2rem;
+    }
+    
+    .features {
+      margin: 0;
+    }
+  
+  }
+button {
+    border-radius: 10%;
 }
+.dark-mode {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode h3 {
+    color: white;
+}
+
+.dark-mode nav {
+    background-color: black;
+    color: white;
+}
+
+.dark-mode button {
+    background-color: black;
+    color: white;
+    border: 1px solid white;
+    border-radius: 10%;
+}
+
+.dark-mode .nav-link:hover {
+    text-decoration: underline;
+    color:white;
+  }
